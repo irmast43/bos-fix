@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title', 'Sponsor')
-@section('parentPageTitle', 'Tables')
+@section('parentPageTitle')
 @section('page-style')
 <link rel="stylesheet" href="{{asset('assetsAdmin/plugins/jquery-datatable/dataTables.bootstrap4.min.css')}}"/>
 @stop
@@ -13,7 +13,7 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="header">
-                <h2><strong>Exportable</strong> Examples </h2>
+                <h2><strong>Data</strong> Sponsor </h2>
                 <ul class="header-dropdown">
                     <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                         <ul class="dropdown-menu dropdown-menu-right slideUp">
@@ -23,7 +23,7 @@
                         </ul>
                     </li>
                     <li class="remove">
-                        <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                        <a role="button" href="{{route('dashboardAdmin')}}"><i class="zmdi zmdi-close"></i></a>
                     </li>
                 </ul>
             </div>

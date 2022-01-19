@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Create Pendaftaran')
+@section('title', 'Tambah Sponsor')
 @section('parentPageTitle', 'Form')
 @section('page-style')
 <link rel="stylesheet" href="{{asset('assetsAdmin/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css')}}"/>
@@ -11,17 +11,17 @@
     <div class="col-lg-12 col-md-12 col-sm-12">
         <div class="card">
             <div class="header">
-                <h2><strong>Basic</strong> Validation</h2>
+                <h2><strong>Form</strong> Sponsor</h2>
                 <ul class="header-dropdown">
-                    <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                    {{-- <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                         <ul class="dropdown-menu dropdown-menu-right">
-                            {{-- <li><a href="javascript:void(0);">Action</a></li>
+                            <li><a href="javascript:void(0);">Action</a></li>
                             <li><a href="javascript:void(0);">Another action</a></li>
-                            <li><a href="javascript:void(0);">Something else</a></li> --}}
+                            <li><a href="javascript:void(0);">Something else</a></li>
                         </ul>
-                    </li>
+                    </li> --}}
                     <li class="remove">
-                        <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                        <a role="button" href="{{route('sponsor.index')}}"><i class="zmdi zmdi-close"></i></a>
                     </li>
                 </ul>
             </div>
