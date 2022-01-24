@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>TheEvent Bootstrap Template - Index</title>
+  <title>BOS.EVENT</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -54,6 +54,7 @@
           <!-- <li><a class="nav-link scrollto" h/index/ref="#hotels">Hotels</a></li> -->
           <li><a class="nav-link scrollto" href="/index/#gallery">Gallery</a></li>
           <li><a class="nav-link scrollto" href="/index/#supporters">Sponsors</a></li>
+          <li><a class="nav-link scrollto" href="{{route('login')}}">Login Admin</a></li>
           <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a href="#">Drop Down 1</a></li>
@@ -76,7 +77,6 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
       <a class="buy-tickets scrollto" href="/contact">Contact</a>
-
     </div>
   </header><!-- End Header -->
 <!-- Vendor JS Files -->

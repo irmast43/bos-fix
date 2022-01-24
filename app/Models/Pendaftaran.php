@@ -15,9 +15,7 @@ class Pendaftaran extends Model
         'nama_ketua',
         'alamat',
         'no_wa',
-        'id1',
-        'nickname1',
-        'id2',
-        'nickname2'
+        'tanggal'
     ];
+    protected $dates = ['tanggal'];
 }

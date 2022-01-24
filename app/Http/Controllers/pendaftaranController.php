@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Pendaftaran;
+use Illuminate\Support\Carbon;
 
 class pendaftaranController extends Controller
 {
@@ -88,9 +89,10 @@ class pendaftaranController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($idpendaftaran)
     {
-        //
+        $pendaftaran = DB::table('pendaftaran')->where('idpendaftaran',$idpendaftaran)->get();
+           return view('admin.pendaftaran.edit',['pendaftaran'=>$pendaftaran]);
     }
 
     /**
@@ -100,9 +102,16 @@ class pendaftaranController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-
+        DB::table('pendaftaran')->where('idpendaftaran',$request->idpendaftaran)->update([
+            'nama_team' => $request->nama_team,
+            'nama_ketua' => $request->nama_ketua,
+            'alamat' => $request->alamat,
+            'no_wa' => $request->no_wa,
+            'tanggal' => $request->tanggal,
+        ]);
+        $tanggal = Carbon::createFromFormat('dd-mm-yy', $request->tanggal)->timestamp;
     }
 
     /**
@@ -113,6 +122,7 @@ class pendaftaranController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('pendaftaran')->where('idpendaftaran', $id)->delete();
+        return redirect('/pendaftaran')->with('Sukses','data berhasil dihapus');
     }
 }

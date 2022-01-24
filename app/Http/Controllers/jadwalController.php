@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Jadwal;
+use Illuminate\Support\Carbon;
 
 class jadwalController extends Controller
 {
@@ -62,9 +63,10 @@ class jadwalController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($idjadwal)
     {
-        //
+        $jadwal = DB::table('jadwal')->where('idjadwal',$idjadwal)->get();
+           return view('admin.jadwal.edit',['jadwal'=>$jadwal]);
     }
 
     /**
@@ -74,9 +76,16 @@ class jadwalController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        DB::table('pendaftaran')->where('idjadwal',$request->idjadwal)->update([
+            'nama_event' => $request->nama_event,
+            'tanggal' => $request->tanggal,
+            'deskripsi' => $request->deskripsi,
+            'gambar' => $request->gambar,
+            'action' => $request->action,
+        ]);
+        $tanggal = Carbon::createFromFormat('dd-mm-yy', $request->tanggal)->timestamp;
     }
 
     /**
@@ -87,6 +96,7 @@ class jadwalController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('jadwal')->where('idjadwal', $id)->delete();
+        return redirect('/jadwal')->with('Sukses','data berhasil dihapus');
     }
 }

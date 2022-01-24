@@ -21,7 +21,7 @@
                         </ul>
                     </li> --}}
                     <li class="remove">
-                        <a role="button" href="{{route('pendaftaran.index')}}"><i class="zmdi zmdi-close"></i></a>
+                        <a role="button" href="{{route('dashboardAdmin')}}"><i class="zmdi zmdi-close"></i></a>
                     </li>
                 </ul>
             </div>
@@ -41,16 +41,7 @@
                         <input type="text" class="form-control" placeholder="No WA Ketua" name="no_wa" required>
                     </div>
                     <div class="form-group form-float">
-                        <input type="text" class="form-control" placeholder="ID Ketua" name="id1" required>
-                    </div>
-                    <div class="form-group form-float">
-                        <input type="text" class="form-control" placeholder="Nickname Ketua" name="nickname1" required>
-                    </div>
-                    <div class="form-group form-float">
-                        <input type="text" class="form-control" placeholder="ID Anggota 1" name="id2" required>
-                    </div>
-                    <div class="form-group form-float">
-                        <input type="text" class="form-control" placeholder="Nickname Anggota 1" name="nickname2" required>
+                        <input type="text" class="form-control" placeholder="Tanggal Pendaftaran" name="tanggal" required>
                     </div>
 
                     <button class="btn btn-raised btn-primary waves-effect" type="submit">SUBMIT</button>

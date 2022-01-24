@@ -23,7 +23,7 @@
                         </ul>
                     </li>
                     <li class="remove">
-                        <a role="button" href="{{route('dashboardAdmin')}}"><i class="zmdi zmdi-close"></i></a>
+                        <a role="button" href="{{route('pendaftaran.index')}}"><i class="zmdi zmdi-close"></i></a>
                     </li>
                 </ul>
             </div>
@@ -36,23 +36,22 @@
                                 <th>Nama Ketua</th>
                                 <th>Alamat Ketua</th>
                                 <th>No WA Ketua</th>
-                                <th>ID Ketua</th>
-                                <th>Nickname Ketua</th>
-                                <th>ID Anggota 1</th>
-                                <th>Nickname Anggota 1</th>
+                                <th>Tanggal Pendaftaran</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($data as $d)
+                            @foreach ($data as $pendaftaran)
                             <tr>
-                                <td>{{$d->nama_team}}</td>
-                                <td>{{$d->nama_ketua}}</td>
-                                <td>{{$d->alamat}}</td>
-                                <td>{{$d->no_wa}}</td>
-                                <td>{{$d->id1}}</td>
-                                <td>{{$d->nickname1}}</td>
-                                <td>{{$d->id2}}</td>
-                                <td>{{$d->nickname2}}</td>
+                                <td>{{$pendaftaran->nama_team}}</td>
+                                <td>{{$pendaftaran->nama_ketua}}</td>
+                                <td>{{$pendaftaran->alamat}}</td>
+                                <td>{{$pendaftaran->no_wa}}</td>
+                                <td>{{$pendaftaran->tanggal}}</td>
+                                <td>
+                                    <a href="/pendaftaran/edit/{{$pendaftaran->idpendaftaran}}" class="badge bg-warning btn-lg"><span data-feather="edit">Edit</span></a>
+                                    <a href="/pendaftaran/delete/{{$pendaftaran->idpendaftaran}}" class="badge bg-danger btn-lg" onclick="return confirm(yakin ingin menghapus data?)"><span data-feather="x-circle">Delete</span></a>
+                                </td>
                             </tr>
                             @endforeach
                     </tbody>
