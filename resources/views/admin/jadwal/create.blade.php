@@ -30,6 +30,9 @@
                         <input type="text" class="form-control" placeholder="Nama Event" name="nama_event" required>
                     </div>
                     <div class="form-group form-float">
+                        <input type="date" class="form-control" placeholder="Tanggal Event" name="tanggal" required>
+                    </div>
+                    <div class="form-group form-float">
                         <textarea name="Deskripsi" id="" cols="110" rows="10"></textarea>
                     </div>
                     <div class="form-group form-float">

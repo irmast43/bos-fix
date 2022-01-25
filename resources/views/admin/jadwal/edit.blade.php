@@ -28,17 +28,18 @@
                 <form id="form_validation" action="/jadwal/update" method="POST">
 
                     @csrf
+                    <input type="hidden" name="idjadwal" value="{{$j->idjadwal}}">
                     <div class="form-group form-float">
-                        <input type="text" class="form-control" placeholder="Nama Event" name="nama_event" required>
+                        <input type="text" class="form-control" placeholder="Nama Event" name="nama_event" value="{{$j->nama_event}}" required>
                     </div>
                     <div class="form-group form-float">
-                        <input type="tanggal" class="form-control" placeholder="Tanggal Event" name="tanggal" required>
+                        <input type="date" class="form-control" placeholder="Tanggal Event" name="tanggal" value="{{$j->tanggal}}" required>
                     </div>
                     <div class="form-group form-float">
-                        <textarea name="Deskripsi" id="" cols="110" rows="10"></textarea>
+                        <textarea name="Deskripsi" id="" cols="110" rows="10" >{{$j->deskripsi}}</textarea>
                     </div>
                     <div class="form-group form-float">
-                        <input type="file" class="form-control" placeholder="Gambar" name="gambar" required>
+                        <input type="file" class="form-control" placeholder="Gambar" name="gambar" value="{{$j->gambar}}" required>
                     </div>
                     <div class="form-group form-float">
                         <select id="action" name="action" class="form-control" value="">

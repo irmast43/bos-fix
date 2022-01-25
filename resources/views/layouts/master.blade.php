@@ -14,7 +14,7 @@
         @stack('before-styles')
         <link rel="stylesheet" href="{{asset('assetsAdmin/plugins/bootstrap/css/bootstrap.min.css')}}">
         @if (trim($__env->yieldContent('page-style')))
-            @yield('page-style')
+            @yield('page-style') 
         @endif
         <!-- Custom Css -->
         <link rel="stylesheet" href="{{asset('assetsAdmin/css/style.min.css')}}">

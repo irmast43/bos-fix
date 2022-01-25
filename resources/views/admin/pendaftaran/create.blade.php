@@ -41,7 +41,7 @@
                         <input type="text" class="form-control" placeholder="No WA Ketua" name="no_wa" required>
                     </div>
                     <div class="form-group form-float">
-                        <input type="text" class="form-control" placeholder="Tanggal Pendaftaran" name="tanggal" required>
+                        <input type="date" class="form-control" placeholder="Tanggal Pendaftaran" name="tanggal" required>
                     </div>
 
                     <button class="btn btn-raised btn-primary waves-effect" type="submit">SUBMIT</button>

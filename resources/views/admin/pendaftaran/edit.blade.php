@@ -32,19 +32,19 @@
                     @csrf
                     <input type="hidden" name="idpendaftaran" value="{{$p->idpendaftaran}}">
                     <div class="form-group form-float">
-                        <input type="text" class="form-control" placeholder="Nama Team" name="nama_team" required>
+                        <input type="text" class="form-control" placeholder="Nama Team" name="nama_team" value="{{$p->nama_team}}" required >
                     </div>
                     <div class="form-group form-float">
-                        <input type="text" class="form-control" placeholder="Nama Ketua" name="nama_ketua" required>
+                        <input type="text" class="form-control" placeholder="Nama Ketua" name="nama_ketua" value="{{$p->nama_ketua}}" required >
                     </div>
                     <div class="form-group form-float">
-                        <input type="text" class="form-control" placeholder="Alamat Ketua" name="alamat" required>
+                        <input type="text" class="form-control" placeholder="Alamat Ketua" name="alamat" value="{{$p->alamat}}" required >
                     </div>
                     <div class="form-group form-float">
-                        <input type="text" class="form-control" placeholder="No WA Ketua" name="no_wa" required>
+                        <input type="text" class="form-control" placeholder="No WA Ketua" name="no_wa" value="{{$p->no_wa}}" required >
                     </div>
                     <div class="form-group form-float">
-                        <input type="text" class="form-control" placeholder="Tanggal Pendaftaran" name="tanggal" required>
+                        <input type="date" class="form-control" placeholder="Tanggal Pendaftaran" name="tanggal" value="{{$p->tanggal}}" required >
                     </div>
 
                     <button class="btn btn-raised btn-primary waves-effect" type="submit">Edit</button>

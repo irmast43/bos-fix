@@ -85,7 +85,8 @@ class jadwalController extends Controller
             'gambar' => $request->gambar,
             'action' => $request->action,
         ]);
-        $tanggal = Carbon::createFromFormat('dd-mm-yy', $request->tanggal)->timestamp;
+        return redirect('/jadwal');
+        // $tanggal = Carbon::createFromFormat('dd-mm-yy', $request->tanggal)->timestamp;
     }
 
     /**

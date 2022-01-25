@@ -111,7 +111,8 @@ class pendaftaranController extends Controller
             'no_wa' => $request->no_wa,
             'tanggal' => $request->tanggal,
         ]);
-        $tanggal = Carbon::createFromFormat('dd-mm-yy', $request->tanggal)->timestamp;
+        return redirect('/pendaftaran')->with('Sukses','data berhasil dihapus');
+        // $tanggal = Carbon::createFromFormat('dd-mm-yy', $request->tanggal)->timestamp;
     }
 
     /**
