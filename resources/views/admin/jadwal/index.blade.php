@@ -33,7 +33,9 @@
                         <thead>
                             <tr>
                                 <th>Nama Event</th>
-                                <th>Tanggal</th>
+                                <th>Jenis Tournamen</th>
+                                <th>Tanggal Mulai</th>
+                                <th>Tanggal Selesai</th>
                                 <th>Deskripsi Kegiatan</th>
                                 <th>Gambar</th>
                                 <th>Action</th>
@@ -44,7 +46,9 @@
                             @foreach ($datajadwal as $jadwal)
                             <tr>
                                 <td>{{$jadwal->nama_event}}</td>
-                                <td>{{$jadwal->tanggal}}</td>
+                                <td>{{$jadwal->jenis}}</td>
+                                <td>{{$jadwal->tanggal_mulai}}</td>
+                                <td>{{$jadwal->tanggal_selesai}}</td>
                                 <td>{{$jadwal->deskripsi}}</td>
                                 <td>{{$jadwal->gambar}}</td>
                                 <td>{{$jadwal->action}}</td>

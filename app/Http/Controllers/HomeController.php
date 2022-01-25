@@ -2,19 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     /**
      * Show the application dashboard.
@@ -23,6 +15,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $sql = 'SELECT * FROM jadwal ORDER BY idjadwal asc';
+        $datajadwal = DB::select($sql);
+        // dd($datajadwal);
+        return view('index', ['datajadwal' => $datajadwal]);
     }
 }

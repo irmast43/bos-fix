@@ -10,7 +10,7 @@
     <div class="col-lg-3 col-md-6 col-sm-12">
         <div class="card widget_2 big_icon traffic">
             <div class="body">
-                <h6>Traffic</h6>
+                <h6>Jadwal</h6>
                 <h2>20 <small class="info">of 1Tb</small></h2>
                 <small>2% higher than last month</small>
                 <div class="progress">
@@ -22,7 +22,7 @@
     <div class="col-lg-3 col-md-6 col-sm-12">
         <div class="card widget_2 big_icon sales">
             <div class="body">
-                <h6>Sales</h6>
+                <h6>Pendaftaran</h6>
                 <h2>12% <small class="info">of 100</small></h2>
                 <small>6% higher than last month</small>
                 <div class="progress">
@@ -34,7 +34,7 @@
     <div class="col-lg-3 col-md-6 col-sm-12">
         <div class="card widget_2 big_icon email">
             <div class="body">
-                <h6>Email</h6>
+                <h6>Jadwal</h6>
                 <h2>39 <small class="info">of 100</small></h2>
                 <small>Total Registered email</small>
                 <div class="progress">
@@ -46,7 +46,7 @@
     <div class="col-lg-3 col-md-6 col-sm-12">
         <div class="card widget_2 big_icon domains">
             <div class="body">
-                <h6>Domains</h6>
+                <h6>Laporan</h6>
                 <h2>8 <small class="info">of 10</small></h2>
                 <small>Total Registered Domain</small>
                 <div class="progress">

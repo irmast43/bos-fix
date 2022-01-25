@@ -11,9 +11,20 @@ class Jadwal extends Model
     protected $table = 'jadwal';
     protected $fillable = [
         'nama_event',
-        'tanggal',
+        'jenis',
+        'tanggal_mulai',
+        'tanggal_selesai',
         'deskripsi',
         'gambar',
         'action',
+        'user_id',
     ];
+    function gambar()
+    {
+        if ($this->image && file_exists(public_path('images/post/' . $this->gambar())))
+            return asset('images/post/' . $this->gambar());
+        else
+            return asset('images/no_image.png');
+    }
+    protected $dates = ['tanggal'];
 }

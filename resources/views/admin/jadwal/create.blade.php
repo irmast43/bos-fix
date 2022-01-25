@@ -24,13 +24,19 @@
                 </ul>
             </div>
             <div class="body">
-                <form id="form_validation" action="{{route('jadwal.store')}}" method="POST">
+                <form action="{{ route('jadwal.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group form-float">
                         <input type="text" class="form-control" placeholder="Nama Event" name="nama_event" required>
                     </div>
                     <div class="form-group form-float">
-                        <input type="date" class="form-control" placeholder="Tanggal Event" name="tanggal" required>
+                        <input type="text" class="form-control" placeholder="Jenis Tournament" name="jenis" required>
+                    </div>
+                    <div class="form-group form-float">
+                        <input type="date" class="form-control" placeholder="Tanggal Mulai Event" name="tanggal_mulai" required>
+                    </div>
+                    <div class="form-group form-float">
+                        <input type="date" class="form-control" placeholder="Tanggal Selesai Event" name="tanggal_selesai" required>
                     </div>
                     <div class="form-group form-float">
                         <textarea name="Deskripsi" id="" cols="110" rows="10"></textarea>
